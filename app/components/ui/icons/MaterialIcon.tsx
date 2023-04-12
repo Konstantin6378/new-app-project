@@ -8,5 +8,3 @@ export const MaterialIcon: FC<{ name: TypeMaterialIconName }> = ({ name }) => {
 
 	return <IconComponent /> || <MaterialIcons.MdDragIndicator />
 }
-
-// export default MaterialIcon
