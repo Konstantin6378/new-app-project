@@ -44,4 +44,5 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 		</>
 	)
 }
+
 export default Meta
