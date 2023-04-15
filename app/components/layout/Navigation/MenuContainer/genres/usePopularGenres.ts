@@ -4,7 +4,7 @@ import { GenreService } from '@/services/genre.service'
 
 import { getGenreUrl } from '@/config/url.config'
 
-import { IMenuItem } from '../menu.types'
+import { IMenuItem } from '../menu.interface'
 
 export const usePopularGenres = () => {
 	const queryData = useQuery(
