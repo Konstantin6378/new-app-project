@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from 'react'
 
-import MaterialIcon from '../icons/MaterialIcon'
+import { MaterialIcon } from '../icons/MaterialIcon'
 
 import styles from './SearchField.module.scss'
 

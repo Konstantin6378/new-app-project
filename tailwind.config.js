@@ -114,6 +114,7 @@ module.exports = {
           color: theme('colors.white'),
           boxShadow: theme('boxShadow.lg'),
         },
+
       }),
         addUtilities({
           '.text-shadow': {
