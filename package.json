@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
@@ -20,18 +21,25 @@
     "eslint-config-next": "13.3.0",
     "install": "^0.13.0",
     "next": "13.3.0",
+    "nextjs-progressbar": "^0.0.16",
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-icons": "^4.8.0",
     "react-loading-skeleton": "^3.2.0",
     "react-query": "^3.39.3",
+    "react-redux": "^8.0.5",
+    "react-redux-toastr": "^7.6.11",
     "sass": "^1.61.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/react-redux-toastr": "^7.6.2",
     "prettier": "^2.8.7"
   }
 }
