@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // experimental: {
+  //   appDir: true,
+  // },
   poweredByHeader: false,
-  optimizeFonts: false,
+  // optimizeFonts: false,
   env: {
     APP_URL: process.env.REACT_APP_URL,
     APP_ENV: process.env.REACT_APP_ENV,
-    APP_SERVER_URL: process.env.REACT_APP_SERVER_URL,
+    // APP_SERVER_URL: process.env.REACT_APP_SERVER_URL,
   },
   async rewrites() {
     return [

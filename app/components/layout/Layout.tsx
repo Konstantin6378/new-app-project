@@ -1,11 +1,13 @@
 import { FC } from 'react'
 
+import { ReactChild } from '@/config/react'
+
 // import { ReactChild } from '@/config/react'
 import styles from './Layout.module.scss'
 import Navigation from './Navigation/Navigation'
 import Sidebar from './Sidebar/Sidebar'
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<ReactChild> = ({ children }) => {
 	return (
 		<div className={styles.layout}>
 			<Navigation />
