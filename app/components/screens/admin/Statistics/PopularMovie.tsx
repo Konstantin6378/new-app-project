@@ -24,30 +24,30 @@ const PopularMovie: FC = () => {
 		}
 	)
 	return (
-		<div className={cn(styles.block, styles.popular)}>
-			<SubHeading title="The most popular movie" />
-			{isLoading ? (
-				<SkeletonLoader className="h-48" />
-			) : (
-				movie && (
-					<>
-						<h3>Opened {movie?.countOpened} times</h3>
-						<Link href={getMovieUrl(movie.slug)}>
-							<a>
+		<>
+			<div className={cn(styles.block, styles.popular)}>
+				<SubHeading title="The most popular movie" />
+				{isLoading ? (
+					<SkeletonLoader className="h-48" />
+				) : (
+					movie && (
+						<>
+							<h3>Opened {movie.countOpened} times</h3>
+							<Link href={getMovieUrl(movie.slug)}>
 								<Image
 									width={285}
 									height={176}
 									src={movie.bigPoster}
 									alt={movie.title}
-									className={styles.image}
+									className={styles.img}
 									unoptimized
 								/>
-							</a>
-						</Link>
-					</>
-				)
-			)}
-		</div>
+							</Link>
+						</>
+					)
+				)}
+			</div>
+		</>
 	)
 }
 export default PopularMovie

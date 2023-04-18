@@ -8,11 +8,6 @@ import { API_URL } from '@/config/api.config'
 
 import { errorCatch, getContentType } from './api.helpers'
 
-export const axiosClassic = axios.create({
-	baseURL: API_URL,
-	headers: getContentType(),
-})
-
 export const instance = axios.create({
 	baseURL: API_URL,
 	headers: getContentType(),
@@ -52,3 +47,8 @@ instance.interceptors.request.use(
 )
 
 export default instance
+
+export const axiosClassic = axios.create({
+	baseURL: API_URL,
+	headers: getContentType(),
+})
