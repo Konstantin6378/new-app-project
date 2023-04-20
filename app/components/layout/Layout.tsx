@@ -2,7 +2,6 @@ import { FC } from 'react'
 
 import { ReactChild } from '@/config/react'
 
-// import { ReactChild } from '@/config/react'
 import styles from './Layout.module.scss'
 import Navigation from './Navigation/Navigation'
 import Sidebar from './Sidebar/Sidebar'

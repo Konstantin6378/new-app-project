@@ -3,7 +3,7 @@ import { FC } from 'react'
 import AdminNavigation from '@/ui/admin-navigation/AdminNavigation'
 import Heading from '@/ui/heading/Heading'
 
-import Meta from '@/utils/meta/Meta'
+import { Meta } from '@/utils/meta/Meta'
 
 import Statistics from './Statistics/Statistics'
 

@@ -8,7 +8,7 @@ const Field = forwardRef<HTMLInputElement, IField>(
 	({ error, placeholder, type = 'text', style, ...rest }, ref) => {
 		return (
 			<div className={cn(styles.common, styles.field)} style={style}>
-				<label htmlFor="">
+				<label>
 					<span>{placeholder}</span>
 					<input type={type} ref={ref} {...rest} />
 				</label>

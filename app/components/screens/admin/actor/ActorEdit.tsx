@@ -11,7 +11,7 @@ import SlugField from '@/ui/form-elements/SlugField/SlugField'
 import formStyles from '@/ui/form-elements/admin-form.module.scss'
 import Heading from '@/ui/heading/Heading'
 
-import Meta from '@/utils/meta/Meta'
+import { Meta } from '@/utils/meta/Meta'
 import { generateSlug } from '@/utils/string/generateSlug'
 
 import { IActorEditInput } from './actor-edit.interface'

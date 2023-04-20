@@ -10,7 +10,7 @@ import Field from '@/components/ui/form-elements/Field'
 import SlugField from '@/components/ui/form-elements/SlugField/SlugField'
 import Heading from '@/components/ui/heading/Heading'
 
-import Meta from '@/utils/meta/Meta'
+import { Meta } from '@/utils/meta/Meta'
 import { generateSlug } from '@/utils/string/generateSlug'
 
 import formStyles from '../../../ui/form-elements/admin-form.module.scss'
