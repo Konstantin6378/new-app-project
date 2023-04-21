@@ -1,30 +1,21 @@
-import dynamic from 'next/dynamic'
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { stripHtml } from 'string-strip-html'
 
 import UploadField from '@/components/ui/form-elements/UploadField/UploadField'
 
-import SkeletonLoader from '@/ui/SkeletonLoader'
 import AdminNavigation from '@/ui/admin-navigation/AdminNavigation'
 import Button from '@/ui/form-elements/Button'
 import Field from '@/ui/form-elements/Field'
 import SlugField from '@/ui/form-elements/SlugField/SlugField'
 import formStyles from '@/ui/form-elements/admin-form.module.scss'
 import Heading from '@/ui/heading/Heading'
+import SkeletonLoader from '@/ui/skeleton-loader/SkeletonLoader'
 
 import { Meta } from '@/utils/meta/Meta'
 import { generateSlug } from '@/utils/string/generateSlug'
 
 import { IActorEditInput } from './actor-edit.interface'
 import { useActorEdit } from './useActorEdit'
-
-const DynamicTextEditor = dynamic(
-	() => import('@/ui/form-elements/TextEditor'),
-	{
-		ssr: false,
-	}
-)
 
 const ActorEdit: FC = () => {
 	const {

@@ -2,7 +2,7 @@ import cn from 'classnames'
 import Image from 'next/image'
 import { FC } from 'react'
 
-import SkeletonLoader from '../../SkeletonLoader'
+import SkeletonLoader from '../../skeleton-loader/SkeletonLoader'
 import { IUploadField } from '../form.interface'
 import styles from '../form.module.scss'
 

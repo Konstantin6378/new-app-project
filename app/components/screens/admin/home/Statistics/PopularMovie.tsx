@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { useQuery } from 'react-query'
 
-import SkeletonLoader from '@/components/ui/SkeletonLoader'
-import SubHeading from '@/components/ui/heading/SubHeading'
+import SubHeading from '@/ui/heading/SubHeading'
+import SkeletonLoader from '@/ui/skeleton-loader/SkeletonLoader'
 
 import { IMovie } from '@/shared/types/movie.types'
 
