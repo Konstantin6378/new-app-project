@@ -1,4 +1,4 @@
-const FavIcons = () => {
+const Favicons = () => {
 	return (
 		<>
 			{/* https://iconifier.net/ */}
@@ -52,4 +52,4 @@ const FavIcons = () => {
 	)
 }
 
-export default FavIcons
+export default Favicons

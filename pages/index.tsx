@@ -1,19 +1,24 @@
 import { errorCatch } from 'api/api.helpers'
 import type { GetStaticProps, NextPage } from 'next'
 
+import { IGalleryItem } from '@/components/ui/gallery/gallery.interface'
+
 import Home from '@/screens/home/Home'
 import { IHome } from '@/screens/home/home.interface'
 
 import { ISlide } from '@/ui/slider/slider.interface'
 
+import { ActorService } from '@/services/actor.service'
 import { MovieService } from '@/services/movie.service'
 
 import { getGenresList } from '@/utils/movie/getGenresList'
 
-import { getMovieUrl } from '@/config/url.config'
+import { getActorUrl, getMovieUrl } from '@/config/url.config'
 
-const HomePage: NextPage<IHome> = ({ slides }) => {
-	return <Home slides={slides} />
+const HomePage: NextPage<IHome> = ({ slides, actors, trendingMovies }) => {
+	return (
+		<Home slides={slides} actors={actors} trendingMovies={trendingMovies} />
+	)
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -28,9 +33,32 @@ export const getStaticProps: GetStaticProps = async () => {
 			bigPoster: m.bigPoster,
 		}))
 
+		const { data: dataActors } = await ActorService.getAll()
+
+		const actors: IGalleryItem[] = dataActors.slice(0, 7).map((a) => ({
+			name: a.name,
+			posterPath: a.photo,
+			link: getActorUrl(a.slug),
+			content: {
+				title: a.name,
+				subTitle: `+${a.countMovies} movies`,
+			},
+		}))
+		const dataTrendingMovies = await MovieService.getMostPopularMovies()
+
+		const trendingMovies: IGalleryItem[] = dataTrendingMovies
+			.slice(0, 7)
+			.map((m) => ({
+				name: m.title,
+				posterPath: m.poster,
+				link: getMovieUrl(m.slug),
+			}))
+
 		return {
 			props: {
 				slides,
+				actors,
+				trendingMovies,
 			} as IHome,
 		}
 	} catch (error) {
@@ -39,6 +67,8 @@ export const getStaticProps: GetStaticProps = async () => {
 		return {
 			props: {
 				slides: [],
+				actors: [],
+				trendingMovies: [],
 			},
 		}
 	}

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import ReduxToastrLib from 'react-redux-toastr'
 
-const ReduxToast: FC = () => {
+const ReduxToastr: FC = () => {
 	return (
 		<ReduxToastrLib
 			newestOnTop={false}
@@ -14,4 +14,4 @@ const ReduxToast: FC = () => {
 		/>
 	)
 }
-export default ReduxToast
+export default ReduxToastr

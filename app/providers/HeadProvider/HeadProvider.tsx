@@ -5,7 +5,7 @@ import { FC } from 'react'
 import { accentColor } from '@/config/constants'
 import { ReactChild } from '@/config/react'
 
-import FavIcons from './Favicons'
+import Favicons from './Favicons'
 
 const HeadProvider: FC<ReactChild> = ({ children }) => {
 	return (
@@ -22,16 +22,19 @@ const HeadProvider: FC<ReactChild> = ({ children }) => {
 					name="viewport"
 					content="width=device-width, initial-scale=1, maximum-scale=1.0"
 				/>
-				<FavIcons />
-				<meta name="theme-color" content={'#181b1e'} />
-				<meta name="msapplication-navbutton-color" content={'#181b1e'} />
+
+				<Favicons />
+
+				<meta name="theme-color" content={'#181B1E'} />
+				<meta name="msapplication-navbutton-color" content={'#181B1E'} />
 				<meta
 					name="apple-mobile-web-app-status-bar-style"
-					content={'#181b1e'}
+					content={'#181B1E'}
 				/>
 			</Head>
 			{children}
 		</>
 	)
 }
+
 export default HeadProvider
