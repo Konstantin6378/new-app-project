@@ -38,6 +38,7 @@
     "react-redux": "^8.0.5",
     "react-redux-toastr": "^7.6.11",
     "react-select": "^5.7.2",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.61.0",
     "string-strip-html": "^13.2.3",
     "tailwindcss": "3.3.1",
