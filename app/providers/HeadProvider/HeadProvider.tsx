@@ -5,7 +5,7 @@ import { FC } from 'react'
 import { accentColor } from '@/config/constants'
 import { ReactChild } from '@/config/react'
 
-import Favicons from './Favicons'
+import { Favicons } from './Favicons'
 
 const HeadProvider: FC<ReactChild> = ({ children }) => {
 	return (

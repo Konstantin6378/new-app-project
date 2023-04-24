@@ -17,6 +17,9 @@ export const ActorService = {
 				: {},
 		})
 	},
+	async getBySlug(slug: string) {
+		return axios.get<IActor>(getActorsUrl(`/by-slug/${slug}`))
+	},
 	async getById(_id: string) {
 		return axios.get<IActorEditInput>(getActorsUrl(`/${_id}`))
 	},

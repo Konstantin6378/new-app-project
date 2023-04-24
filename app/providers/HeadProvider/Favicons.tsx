@@ -1,4 +1,4 @@
-const Favicons = () => {
+export const Favicons = () => {
 	return (
 		<>
 			{/* https://iconifier.net/ */}
@@ -51,5 +51,3 @@ const Favicons = () => {
 		</>
 	)
 }
-
-export default Favicons

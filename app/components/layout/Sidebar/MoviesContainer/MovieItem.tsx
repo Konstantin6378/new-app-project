@@ -1,7 +1,6 @@
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-
 
 import { MaterialIcon } from '@/ui/icons/MaterialIcon'
 
@@ -9,8 +8,7 @@ import { IMovie } from '@/shared/types/movie.types'
 
 import { getGenresListEach } from '@/utils/movie/getGenresList'
 
-import { getMovieUrl } from '@/config/url.config'
-import { getGenreUrl } from '@/config/url.config'
+import { getGenreUrl, getMovieUrl } from '@/config/url.config'
 
 import styles from './MovieList.module.scss'
 

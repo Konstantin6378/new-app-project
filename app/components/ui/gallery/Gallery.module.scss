@@ -50,3 +50,11 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .item {
+    &.horizontal {
+      width: 29%;
+    }
+  }
+}

@@ -1,7 +1,3 @@
-import { IGenreEditInput } from '@/components/screens/admin/genre/genre-edit.interface'
-
-import { getGenreUrl } from '@/config/url.config'
-
 import axios from '@/api/interceptors'
 
 export const FileService = {

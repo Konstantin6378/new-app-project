@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
@@ -34,4 +34,5 @@ const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 		</Link>
 	)
 }
+
 export default GalleryItem
