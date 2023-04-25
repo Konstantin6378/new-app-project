@@ -9,7 +9,7 @@ import { IGalleryItemProps } from './gallery.interface'
 const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 	return (
 		<Link
-			href={item.link}
+			href={item.url}
 			className={cn(styles.item, {
 				[styles.withText]: item.content,
 				[styles.horizontal]: variant === 'horizontal',

@@ -17,7 +17,7 @@ interface IGenrePage {
 const GenrePage: NextPage<IGenrePage> = ({ movies, genre }) => {
 	return genre ? (
 		<Catalog
-			movies={movies || []}
+			movies={movies}
 			title={genre.name}
 			description={genre.description}
 		/>

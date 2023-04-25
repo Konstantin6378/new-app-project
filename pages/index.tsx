@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		const actors: IGalleryItem[] = dataActors.slice(0, 7).map((a) => ({
 			name: a.name,
 			posterPath: a.photo,
-			link: getActorUrl(a.slug),
+			url: getActorUrl(a.slug),
 			content: {
 				title: a.name,
 				subTitle: `+${a.countMovies} movies`,
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			.map((m) => ({
 				name: m.title,
 				posterPath: m.poster,
-				link: getMovieUrl(m.slug),
+				url: getMovieUrl(m.slug),
 			}))
 
 		return {

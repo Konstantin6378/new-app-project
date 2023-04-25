@@ -27,7 +27,7 @@ const Catalog: FC<ICatalog> = ({ title, description, movies }) => {
 						item={{
 							name: movie.title,
 							posterPath: movie.bigPoster,
-							link: getMovieUrl(movie.slug),
+							url: getMovieUrl(movie.slug),
 							content: {
 								title: movie.title,
 							},
