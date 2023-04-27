@@ -1,7 +1,6 @@
-export const Favicons = () => {
+const Favicons = () => {
 	return (
 		<>
-			{/* https://iconifier.net/ */}
 			<link
 				rel="shortcut icon"
 				href="/favicons/favicon.ico"
@@ -50,4 +49,9 @@ export const Favicons = () => {
 			/>
 		</>
 	)
+}
+
+export default Favicons
+{
+	/* https://iconifier.net/ */
 }
