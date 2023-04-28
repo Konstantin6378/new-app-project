@@ -13,14 +13,14 @@ import HeartImage from './heart-animation.png'
 
 const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
 	const [isSmashed, setIsSmashed] = useState(false)
-	const { favoriteMovies, refetch } = useFavorites()
+	const { favoritesMovies, refetch } = useFavorites()
 
 	useEffect(() => {
-		if (!favoriteMovies) return
+		if (!favoritesMovies) return
 
-		const isHasMovie = favoriteMovies.some((f) => f._id === movieId) as boolean
+		const isHasMovie = favoritesMovies.some((f) => f._id === movieId) as boolean
 		if (isSmashed !== isHasMovie) setIsSmashed(isHasMovie)
-	}, [favoriteMovies, isSmashed, movieId])
+	}, [favoritesMovies, isSmashed, movieId])
 
 	const { mutateAsync } = useMutation(
 		'update favorites',

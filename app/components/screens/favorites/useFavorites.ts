@@ -5,15 +5,11 @@ import { UserService } from '@/services/user.service'
 export const useFavorites = () => {
 	const {
 		isLoading,
-		data: favoriteMovies,
+		data: favoritesMovies,
 		refetch,
-	} = useQuery('favorite movies', () => UserService.getFavorites(), {
+	} = useQuery('Favorite movies', () => UserService.getFavorites(), {
 		select: ({ data }) => data,
 	})
 
-	return {
-		isLoading,
-		favoriteMovies,
-		refetch,
-	}
+	return { isLoading, favoritesMovies, refetch }
 }

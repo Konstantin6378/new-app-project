@@ -33,7 +33,6 @@ const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
 				<Gallery items={similarMovies} />
 			</div>
 			<DynamicRateMovie slug={movie.slug} movieId={movie._id} />
-			{/* Rating */}
 		</Meta>
 	)
 }

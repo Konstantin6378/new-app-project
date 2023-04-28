@@ -2,28 +2,28 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
-import { IMovie } from '@/shared/types/movie.types'
-
-import { getMovieUrl } from '@/config/url.config'
-
 import FavoriteButton from '../single-movie/FavoriteButton/FavoriteButton'
 
-import styles from './FavoriteItem.module.scss'
+import styles from './Favorites.module.scss'
+import { IFavoriteItem } from './favorites.interface'
 
-const FavoriteItem: FC<{ movie: IMovie }> = ({ movie }) => {
+const FavoriteItem: FC<{ item: IFavoriteItem }> = ({ item }) => {
 	return (
 		<div className={styles.itemWrapper}>
-			<FavoriteButton movieId={movie._id} />
-			<Link href={getMovieUrl(movie.slug)}>
+			<FavoriteButton movieId={item._id} />
+			<Link href={item.url} className={styles.item}>
 				<Image
-					alt={movie.title}
-					src={movie.poster}
+					alt={item.name}
+					src={item.posterPath}
 					layout="fill"
 					draggable={false}
 					priority
 				/>
+
+				<div className={styles.title}>{item.title}</div>
 			</Link>
 		</div>
 	)
 }
+
 export default FavoriteItem

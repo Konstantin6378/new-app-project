@@ -10,7 +10,7 @@ import MoviesList from '../MoviesList'
 import NotAuthFavorites from './NotAuthFavorites'
 
 const FavoriteMovies: FC = () => {
-	const { favoriteMovies, isLoading } = useFavorites()
+	const { favoritesMovies, isLoading } = useFavorites()
 	const { user } = useAuth()
 
 	if (!user) return <NotAuthFavorites />
@@ -22,7 +22,7 @@ const FavoriteMovies: FC = () => {
 	) : (
 		<MoviesList
 			link="/favorites"
-			movies={favoriteMovies?.slice(0, 3) || []}
+			movies={favoritesMovies?.slice(0, 3) || []}
 			title="Favorites"
 		/>
 	)
