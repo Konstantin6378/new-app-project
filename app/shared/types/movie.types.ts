@@ -23,6 +23,7 @@ export interface IActor {
 }
 
 export interface IMovie {
+	some(arg0: (f: any) => boolean): unknown
 	slice(arg0: number, arg1: number): IMovie[]
 	_id: string
 	poster: string
