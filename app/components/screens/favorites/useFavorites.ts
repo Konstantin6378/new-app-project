@@ -7,7 +7,7 @@ export const useFavorites = () => {
 		isLoading,
 		data: favoriteMovies,
 		refetch,
-	} = useQuery('favorite movies', () => UserService.getById(userId), {
+	} = useQuery('favorite movies', () => UserService.getFavorites(), {
 		select: ({ data }) => data,
 	})
 
