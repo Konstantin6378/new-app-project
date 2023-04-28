@@ -39,6 +39,7 @@
     "react-redux": "^8.0.5",
     "react-redux-toastr": "^7.6.11",
     "react-select": "^5.7.2",
+    "react-star-rating-component": "^1.4.1",
     "react-transition-group": "^4.4.5",
     "sass": "^1.61.0",
     "string-strip-html": "^13.2.3",
@@ -55,6 +56,7 @@
     "@types/react-draft-wysiwyg": "^1.13.4",
     "@types/react-redux-toastr": "^7.6.2",
     "@types/react-select": "^5.0.1",
+    "@types/react-star-rating-component": "^1.4.1",
     "prettier": "^2.8.7"
   }
 }

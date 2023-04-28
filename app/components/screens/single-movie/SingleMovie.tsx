@@ -8,13 +8,19 @@ import SubHeading from '@/components/ui/heading/SubHeading'
 import { Meta } from '@/utils/meta/Meta'
 
 import Content from './Content/Content'
+import { useUpdateCountOpened } from './RateMovie/useUpdateCountOpened'
 import { IMoviePage } from '@/../pages/movie/[slug]'
 
 const DynamicPlayer = dynamic(() => import('@/ui/video-player/VideoPlayer'), {
 	ssr: false,
 })
 
+const DynamicRateMovie = dynamic(() => import('./RateMovie/RateMovie'), {
+	ssr: false,
+})
+
 const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
+	useUpdateCountOpened(movie.slug)
 	return (
 		<Meta title={movie?.title} description={`Watch ${movie?.title}`}>
 			<Banner
@@ -26,7 +32,7 @@ const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
 				<SubHeading title="Similar" />
 				<Gallery items={similarMovies} />
 			</div>
-
+			<DynamicRateMovie slug={movie.slug} movieId={movie._id} />
 			{/* Rating */}
 		</Meta>
 	)

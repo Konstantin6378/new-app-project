@@ -45,10 +45,18 @@ export const MovieService = {
 	async create() {
 		return axios.post<string>(getMoviesUrl('/'))
 	},
+
 	async update(_id: string, data: IMovieEditInput) {
 		return axios.put<string>(getMoviesUrl(`/${_id}`), data)
 	},
+
 	async delete(_id: string) {
 		return axios.delete<string>(getMoviesUrl(`/${_id}`))
+	},
+
+	async updateCountOpened(slug: string) {
+		return axiosClassic.put<string>(getMoviesUrl(`/update-count-opened`), {
+			slug,
+		})
 	},
 }
