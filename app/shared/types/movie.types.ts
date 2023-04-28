@@ -23,6 +23,7 @@ export interface IActor {
 }
 
 export interface IMovie {
+	slice(arg0: number, arg1: number): IMovie[]
 	_id: string
 	poster: string
 	bigPoster: string
