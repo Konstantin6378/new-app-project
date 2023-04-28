@@ -50,15 +50,15 @@ const VideoPlayer: FC<IVideoPlayer> = ({ slug, videoSource }) => {
 
 							<div className={styles.timeControls}>
 								<p className={styles.controlsTime}>
-									{Math.floor(video.currentTime % 60) +
+									{Math.floor(video.currentTime / 60) +
 										':' +
 										('0' + Math.floor(video.currentTime % 60)).slice(-2)}
 								</p>
 								<p> / </p>
 								<p className={styles.controlsTime}>
-									{Math.floor(video.currentTime / 60) +
+									{Math.floor(video.videoTime / 60) +
 										':' +
-										('0' + Math.floor(video.currentTime % 60)).slice(-2)}
+										('0' + Math.floor(video.videoTime % 60)).slice(-2)}
 								</p>
 							</div>
 						</div>

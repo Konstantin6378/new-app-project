@@ -66,22 +66,26 @@ export const useVideo = () => {
 	useEffect(() => {
 		const handleKeyDown = (event: KeyboardEvent) => {
 			switch (event.key) {
-				case 'ArrowRight':
+				case 'ArrowRight': {
 					forward()
 					break
-				case 'ArrowLeft':
+				}
+				case 'ArrowLeft': {
 					revert()
 					break
+				}
 				case ' ': {
 					event.preventDefault()
 					toggleVideo()
 					break
 				}
-				case 'f':
+				case 'f': {
 					fullScreen()
 					break
-				default:
+				}
+				default: {
 					return
+				}
 			}
 		}
 
@@ -89,8 +93,6 @@ export const useVideo = () => {
 		return () => {
 			document.removeEventListener('keydown', handleKeyDown)
 		}
-
-		return
 	}, [toggleVideo])
 
 	return useMemo(
