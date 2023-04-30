@@ -3,6 +3,8 @@ import { FC } from 'react'
 import Heading from '@/components/ui/heading/Heading'
 import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
 
+import { useAuth } from '@/hooks/useAuth'
+
 import { Meta } from '@/utils/meta/Meta'
 
 import { getMovieUrl } from '@/config/url.config'
@@ -13,6 +15,10 @@ import { useFavorites } from './useFavorites'
 
 const Favorites: FC = () => {
 	const { favoritesMovies, isLoading } = useFavorites()
+
+	const { user } = useAuth()
+
+	if (!user) return null
 	return (
 		<Meta title="Favorites">
 			<Heading title={'Favorites'} />
@@ -24,25 +30,18 @@ const Favorites: FC = () => {
 						containerClassName={styles.containerLoader}
 					/>
 				) : (
-					favoritesMovies?.map(
-						(movie: {
-							_id: string
-							title: any
-							bigPoster: any
-							slug: string
-						}) => (
-							<FavoriteItem
-								key={movie._id}
-								item={{
-									name: movie.title,
-									posterPath: movie.bigPoster,
-									url: getMovieUrl(movie.slug),
-									title: movie.title,
-									_id: movie._id,
-								}}
-							/>
-						)
-					)
+					favoritesMovies?.map((movie) => (
+						<FavoriteItem
+							key={movie._id}
+							item={{
+								name: movie.title,
+								posterPath: movie.bigPoster,
+								url: getMovieUrl(movie.slug),
+								title: movie.title,
+								_id: movie._id,
+							}}
+						/>
+					))
 				)}
 			</section>
 		</Meta>

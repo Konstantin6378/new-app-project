@@ -23,7 +23,7 @@ export const UserService = {
 	},
 
 	async getFavorites() {
-		return axios.get<IMovie>(getUsersUrl('/profile/favorites'))
+		return axios.get<IMovie[]>(getUsersUrl('/profile/favorites'))
 	},
 
 	async toggleFavorite(movieId: string) {

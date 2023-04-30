@@ -5,6 +5,8 @@ import { FC } from 'react'
 import { accentColor } from '@/config/constants'
 import { ReactChild } from '@/config/react'
 
+import Favicons from './Favicons'
+
 const HeadProvider: FC<ReactChild> = ({ children }) => {
 	return (
 		<>
@@ -18,9 +20,8 @@ const HeadProvider: FC<ReactChild> = ({ children }) => {
 				<meta charSet="UTF-8" />
 				<meta
 					name="viewport"
-					content="width=device-width, initial-scale=1, maximum-scale=1.0"
+					content="width=device-width, initial-scale=1, maximum-scale=5"
 				/>
-
 				<link
 					rel="shortcut icon"
 					href="/favicons/favicon.ico"
@@ -67,6 +68,8 @@ const HeadProvider: FC<ReactChild> = ({ children }) => {
 					sizes="180x180"
 					href="/favicons/apple-touch-icon-180x180.png"
 				/>
+				{/* 
+				<Favicons /> */}
 
 				<meta name="theme-color" content={'#181B1E'} />
 				<meta name="msapplication-navbutton-color" content={'#181B1E'} />
@@ -74,6 +77,7 @@ const HeadProvider: FC<ReactChild> = ({ children }) => {
 					name="apple-mobile-web-app-status-bar-style"
 					content={'#181B1E'}
 				/>
+				<link rel="manifest" href="/manifest.json" />
 			</Head>
 			{children}
 		</>
