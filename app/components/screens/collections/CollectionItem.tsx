@@ -10,7 +10,7 @@ import { ICollection } from './collections.interface'
 
 const CollectionItem: FC<{ collection: ICollection }> = ({ collection }) => {
 	return (
-		<Link className={styles.collection} href={getGenreUrl(collection.slug)}>
+		<Link href={getGenreUrl(collection.slug)} className={styles.collection}>
 			<CollectionImage collection={collection} />
 
 			<div className={styles.content}>
