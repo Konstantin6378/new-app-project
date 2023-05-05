@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 
 export interface ReactChild {
-	children: ReactNode
+	children: PropsWithChildren
 }
