@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 
 export type TypeRoles = {
 	isOnlyAdmin?: boolean
@@ -9,6 +9,6 @@ export type TypeRoles = {
 export type NextPageAuth<P = {}> = NextPage<P> & TypeRoles
 
 export type TypeComponentAuthFields = {
-	children?: ReactNode
+	children?: PropsWithChildren
 	Component: TypeRoles
 }
